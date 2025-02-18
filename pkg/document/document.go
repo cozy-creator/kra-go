@@ -485,11 +485,8 @@ func SaveKritaLayer(img image.Image, outputPath string) error {
 	return ioutil.WriteFile(outputPath, outBuf.Bytes(), 0644)
 }
 
-// GenerateSVGContent generates SVG content for a shape layer.
-// This is a stub; implement according to your SVG needs using pkg/xmlhelper.
 func GenerateSVGContent(layer *layers.ShapeLayer, width, height int) (string, error) {
-	// Build your SVG document with proper namespaces.
-	// For example, create an XML tree using xmlhelper.XMLNode.
+
 	header := `<?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">`
 	// Return a dummy SVG.
