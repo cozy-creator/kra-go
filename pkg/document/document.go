@@ -373,8 +373,7 @@ func (doc *KritaDocument) addShapeLayerToZip(zf *zip.Writer, layer *layers.Shape
 	if err := os.MkdirAll(dirName, os.ModePerm); err != nil {
 		return err
 	}
-	// Assume your ShapeLayer has a method to generate SVG content.
-	// (You may call a function in the layers package that uses xmlhelper.)
+	
 	svgContent, err := GenerateSVGContent(layer, doc.Width, doc.Height)
 	if err != nil {
 		return err
